@@ -85,11 +85,9 @@ Escreva com as suas próprias palavras, como se explicasse para um amigo. Não c
 
 ## O que fica desta aula
 
-```markdown
 * Aprendizado de máquina: uma técnica de inteligência artificial que permite aos sistemas aprender a partir de dados.
 * Aprendizado supervisionado: um tipo de aprendizado de máquina em que o sistema é treinado com dados etiquetados.
 * Aprendizado não supervisionado: um tipo de aprendizado de máquina em que o sistema é treinado apenas com dados de entrada.
-```
 
 ---
 
