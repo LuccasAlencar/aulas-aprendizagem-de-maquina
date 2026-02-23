@@ -1,9 +1,9 @@
 ---
-title: "Aula 3 — Aplicações Práticas de Aprendizado de Máquina"
+title: "Aula 3: Aplicações Práticas de Aprendizado de Máquina"
 layout: default
 ---
 
-# Aula 3 — Aplicação Prática do Aprendizado de Máquina
+# Aula 3: Aplicação Prática do Aprendizado de Máquina
 
 **Componente:** Aprendizagem de Máquina  
 **Código:** C1

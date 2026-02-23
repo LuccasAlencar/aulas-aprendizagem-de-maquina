@@ -1,9 +1,9 @@
 ---
-title: "Aula 1 — Aula 1: Conceitos básicos de aprendizado de máquina"
+title: "Aula 1: Conceitos básicos de aprendizado de máquina"
 layout: default
 ---
 
-# Aula 1 — Aula 1: Conceitos básicos de aprendizado de máquina
+# Aula 1: Conceitos básicos de aprendizado de máquina
 
 **Componente:** Aprendizagem de Máquina
 **Código:** C1

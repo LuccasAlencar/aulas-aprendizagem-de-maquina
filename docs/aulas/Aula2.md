@@ -1,9 +1,9 @@
 ---
-title: "Aula 2 — Aula2"
+title: "Aula 2: Tipos de aprendizagem de Máquina"
 layout: default
 ---
 
-# Aula 2 — Aula2
+# Aula 2: Tipos de aprendizagem de Máquina
 
 **Componente:** Aprendizagem de Máquina  
 **Código:** C1-U1-A2  
