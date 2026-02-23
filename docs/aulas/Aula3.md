@@ -12,7 +12,7 @@ layout: default
 
 ## Antes de começar
 
-Quando foi a última vez que você usou um serviço de streaming e recebeu uma recomendação perfeita para o próximo filme ou série? Ou talvez, quando você perguntou algo ao seu assistente virtual e ele respondeu exatamente o que você queria saber. Esses são exemplos do aprendizado de máquina em ação.
+Quando foi a última vez que você usou um serviço de streaming e recebeu uma recomendação perfeita para o próximo filme ou série? Ou talvez, quando você perguntou algo ao seu assistente virtual e ele respondeu exatamente o que você queria saber. Esses são exemplos do aprendizado de máquina em ação
 
 ---
 
