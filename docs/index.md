@@ -15,7 +15,7 @@ Navegue pelo menu superior para acessar os diferentes conteúdos. Você pode usa
 ### Como utilizar
 
 <iframe width="720" height="405"
-  src="https://www.youtube.com/watch?v=mBI_cTc1bhg"
+  src="https://www.youtube.com/embed/mBI_cTc1bhg"
   frameborder="0" allowfullscreen>
 </iframe>
 
