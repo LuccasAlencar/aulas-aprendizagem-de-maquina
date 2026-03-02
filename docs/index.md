@@ -16,9 +16,9 @@ Navegue pelo menu superior para acessar os diferentes conteúdos. Você pode usa
 
 <iframe width="720" height="405"
   src="https://www.youtube.com/embed/mBI_cTc1bhg"
-  frameborder="0" allowfullscreen>
+  frameborder="0" allowfullscreen="">
 </iframe>
 
 ### Material para download
 
-[📥 Baixar notebook — Aula 1](assets/notebooks/aula1.ipynb)
+<a href="notebooks/aula1.zip" download>📥 Baixar notebook — Aula 1</a>
