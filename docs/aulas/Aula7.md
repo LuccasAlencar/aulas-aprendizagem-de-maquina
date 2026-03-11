@@ -3,115 +3,68 @@ title: "Aula 7 — Aplicações práticas de modelos supervisionados"
 layout: default
 ---
 
-## Antes de começar
+## 🎯 Objetivos da Aula
+- Diferenciar com profundidade problemas de Regressão e Classificação.
+- Mapear o ciclo de vida de um dado rotulado.
+- Analisar estudos de caso reais (Netflix, Bancos e Saúde).
 
-Antes de mergulharmos nas aplicações práticas dos modelos supervisionados, pense em um aplicativo que você usa regularmente e reflita sobre como ele pode estar utilizando essas técnicas. Como você acha que isso está melhorando sua experiência?
+## 💡 Cenário Inicial
+Imagine que você trabalha no **setor de crédito de um banco**. Milhares de pessoas pedem empréstimos por minuto. 
+1. Como decidir quem recebe o dinheiro? (Sim/Não)
+2. Se a pessoa receber, qual o limite máximo de crédito que o perfil dela suporta? (Valor numérico)
 
-## O que você vai aprender nesta aula
+Aqui temos os dois pilares do Aprendizado Supervisionado em um único exemplo!
 
-- Entender o funcionamento básico de modelos supervisionados.
-- Distinguir entre problemas de regressão e classificação.
-- Identificar aplicações práticas dos modelos supervisionados no dia a dia.
+---
 
-## Modelos Supervisionados
+## 1. O Conceito de "Dados Rotulados" (Ground Truth)
+No aprendizado supervisionado, o modelo é como um aluno que tem acesso ao gabarito das provas passadas. 
+- **Features (X):** As características (idade, salário, histórico de dívidas).
+- **Label (y):** O rótulo ou resposta (pagou a dívida? Sim/Não).
 
-Quando você usa um aplicativo de streaming e vê sugestões de filmes, está interagindo com uma forma de aprendizado de máquina chamada modelo supervisionado. 🎬
+Sem o rótulo histórico, o modelo supervisionado não consegue aprender.
 
-### Como Funciona?
+## 2. Regressão: Quando o Resultado é um Número
+A regressão busca prever um valor contínuo dentro de um intervalo infinito.
 
-Os modelos supervisionados usam dados rotulados para aprender a realizar previsões ou classificações.
+### 2.1 Casos de Uso Reais:
+* **Mercado Imobiliário:** Prever o preço de venda de um imóvel com base na metragem, bairro e número de quartos.
+* **Logística:** O Uber prevê o tempo de chegada (ETA) analisando tráfego, clima e distância.
+* **Varejo:** Prever quanto uma loja vai vender no Black Friday para ajustar o estoque.
 
-Por exemplo, um sistema de recomendação analisa os seus gostos anteriores e sugere filmes semelhantes. 😄
+## 3. Classificação: Quando o Resultado é uma Categoria
+A classificação busca atribuir uma "etiqueta" ou classe ao dado.
 
-> 🤔 **Para refletir:** Como você acha que o aplicativo sabe quais filmes te interessam?
+### 3.1 Classificação Binária vs. Multiclasse:
+* **Binária (2 opções):** E-mail é Spam ou não? Transação é fraude ou legítima?
+* **Multiclasse (3+ opções):** Classificar uma imagem de animal em "Cão", "Gato" ou "Papagaio". Reconhecimento de dígitos manuscritos (0 a 9).
 
-### Atividade Prática
-Agora, vamos pensar: se você pudesse criar um sistema de recomendação para livros baseado nas suas leituras favoritas, qual tipo de informações essenciais você usaria? 📚
+---
 
-Qual seria a primeira coisa que você faria para começar a construir esse modelo?
+## ✍️ Atividade Prática: Brainstorming de Dados
+Preencha a tabela abaixo mentalmente ou no seu caderno para os seguintes cenários:
 
-> Próxima pergunta: E se quisessemos criar um sistema semelhante para músicas? Como isso mudaria o processo?
+| Cenário | O que seria a Feature (X)? | O que seria o Rótulo (y)? | Tipo de Modelo |
+| :--- | :--- | :--- | :--- |
+| Filtro de Fotos | Pixels da imagem | Nome da pessoa na foto | Classificação |
+| Previsão do Tempo | Umidade, Vento, Pressão | Temperatura em Graus | ? |
+| Diagnóstico Médico | Exames de sangue | Doente / Saudável | ? |
 
-## Regressão vs. Classificação
+---
 
-Olá, pessoal! Hoje vamos falar sobre dois conceitos bem importantes do mundo dos dados e da inteligência artificial: regressão e classificação.
+## 🛠️ Exercício de Fixação (Mão na Massa)
+Um hospital quer usar IA para otimizar o atendimento. Eles têm dois problemas:
+1. Identificar se um tumor é benigno ou maligno através de biópsias.
+2. Estimar quantos dias um paciente ficará internado para liberar leitos.
 
-A **regressão** é quando queremos prever valores numéricos contínuos. Tipo, saber qual será a temperatura amanhã ou estimar o preço médio de um carro usado em sua cidade.
- 
-Já a **classificação** é usada para categorizar coisas em classes específicas. Por exemplo, quando você recebe e-mails no seu celular e eles são automaticamente separados entre spam e não-spam.
+**Responda:**
+- Qual desses problemas é de **Classificação**? Justifique.
+- Qual é de **Regressão**? Justifique.
+- Quais seriam as possíveis "Features" (dados de entrada) para o problema número 2?
 
-> 🤔 **Para refletir:** Qual dessas duas técnicas parece mais útil para decidir se um vídeo vai ser popular ou não?
+---
 
-Agora, pense em dois problemas do cotidiano que você acha que poderiam ser resolvidos usando regressão e outro usando classificação. Escreva eles rapidamente aqui.
-
-Qual dos seus exemplos de classificação é o mais interessante para você? Por quê?
-
-## Aplicações Práticas
-
-Imagine que você está usando um aplicativo de banco e tenta fazer uma transferência inesperada. Você provavelmente já viu aquela mensagem perguntando: "Você realmente quer enviar R$100 para essa conta?". Esse é o trabalho de um sistema de detecção automática de fraudes, baseado em modelos supervisionados.
-
-### Modelos Supervisionados no Dia a Dia
-
-Os modelos supervisionados são usados em várias áreas da vida real. Por exemplo:
-
-- No **marketing**, eles ajudam a prever quais anúncios você mais provavelmente clicará.
-- Na **finança**, esses modelos podem identificar transações suspeitas, como no caso do aplicativo de banco que mencionamos.
-
-### Um Exemplo Prático: Sistemas Anti-Fraude
-
-Um sistema anti-fraude funciona assim:
-1. O sistema aprende com dados anteriores de transações legítimas e fraudulentas.
-2. Quando uma nova transação é feita, o sistema a compara rapidamente com as características das transações conhecidas para identificar possíveis fraudes.
-
-### Atividade Prática
-
-Vamos pensar em um exemplo simples: você está criando um algoritmo que decide se deve enviar ou não um alerta ao detectar uma nova transação. Liste três características de uma transação suspeita.
-
-> 🤔 **Para refletir:** Como a precisão desses sistemas pode ser medida?
-
-Agorora, pense na próxima vez em que usar algum aplicativo financeiro e preste atenção se aparece alguma mensagem ou alerta inesperado. Quem sabe você não esteja vendo um exemplo de uma dessas ferramentas em funcionamento?
-
-## Atividade Prática
-
-Olá, pessoal! Vocês já pararam para pensar em quais tipos de problemas os aplicativos que vocês usam todo dia tentam resolver? Vamos usar essa curiosidade pra entender melhor como identificar problemas relacionados a regressão ou classificação.
-
-### Identificando Problemas
-Primeiro, vamos começar com um exemplo simples. Quem aqui já usou algum app para prever o tempo? 🌤️
-
-Agora, pense: **prever o clima do próximo mês é um problema de regressão ou de classificação?** Para responder isso, precisamos entender melhor cada tipo:
-
-- **Regressão:** quando queremos estimar uma saída contínua.
-- **Classificação:** quando categorizamos dados em classes.
-
-### Atividade: Pergunta e Reflexão
-Vocês acham que a previsão do tempo para o próximo mês é mais sobre classificar tipos de clima (sol, chuva) ou estimar uma saída contínua como temperatura média?
-
-> 🤔 **Para refletir:** Por que você escolheu essa opção? O que você considerou ao fazer a decisão?
-
-### Prática: Justifique Sua Escolha
-Agora, peguem um papel e escrevam por que pensaram que é uma questão de regressão ou classificação. Lembre-se de justificar sua escolha com argumentos sólidos.
-
-E então? Conseguiam pensar em mais algum exemplo do dia a dia onde aplicariam o mesmo critério?
-
-Qual outro problema vocês veem no cotidiano e que seria melhor resolvido através da regressão ou classificação?
-
-## Para fechar — com as suas palavras
-
-Escreva, usando suas próprias palavras, uma breve explicação sobre como os modelos supervisionados são usados em aplicações práticas do dia a dia.
-
-## O que fica desta aula
-```markdown
-- **Modelos Supervisionados**: Técnicas de aprendizado de máquina que utilizam dados rotulados para realizar previsões ou classificações.
-- **Regressão**: Prever valores numéricos contínuos, como temperatura ou preço médio.
-- **Classificação**: Categorizar itens em classes específicas, como spam e não-spam em emails.
-```
-
-## Para ir além
-
-1. [Artigo sobre Aplicações de Regressão e Classificação](https://www.analyticsvidhya.com/blog/2021/06/regression-vs-classification/)
-2. [Vídeo explicativo sobre Modelos Supervisionados](https://www.youtube.com/watch?v=Ku3qTm5Df4g)
-
-## Referências
-
-- "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" por Aurélien Géron
-- "Python Data Science Handbook: Essential Tools for Working with Data" por Jake VanderPlas
+## 📚 Referências e Links Úteis
+1. [Scikit-Learn: Supervised Learning Guide](https://scikit-learn.org/stable/supervised_learning.html)
+2. [Vídeo: Estatística para Machine Learning - Regressão Linear](https://www.youtube.com/watch?v=Ku3qTm5Df4g)
+3. **Leitura:** "Hands-On Machine Learning" - Aurélien Géron (Capítulo 3 e 4).
